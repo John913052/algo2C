@@ -1,0 +1,65 @@
+/* .leftr{
+    width: 300px;
+    height: auto;
+} */
+
+
+.linkr1,.linkr2,.linkr3,.linkr4{
+    width: auto;
+    height: 40px;
+    font: 16px;
+    font-weight: 600;
+    padding: 0px 15px 0px 15px;
+}
+
+.linkr1:hover,.linkr2:hover,.linkr3:hover,.linkr4:hover{
+    background-color: #001528;
+}
+
+
+
+.resize{
+    background-color: #001528;
+}
+
+
+.reflex-container.vertical > .reflex-splitter {
+    border-right: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6;
+    cursor: col-resize;
+    height: 100%;
+    width: 17px !important;
+    background-color:#15314b !important;
+}
+.reflex-container.vertical > .reflex-splitter:hover{
+    background-color: #626ee3 !important;
+}
+.bottom div{
+    word-wrap: break-word;
+}
+
+
+/* Demo Component */
+.horizontal > .reflex-splitter {
+    border-bottom: 1px solid #c6c6c6;
+    border-top: 1px solid #c6c6c6;
+    cursor: row-resize;
+    width: 100%;
+    height: 17px !important;
+    background-color: #15314b;
+}
+
+.horizontal > .reflex-splitter:hover{
+    background-color: #626ee3 !important;
+}
+  i{
+    font-size: 23px;
+  }
+
+  .btn-submit{
+    background-color: #008529;
+  }
+
+  .runcode{
+    background-color: #0046c7 !important;
+  }

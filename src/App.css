@@ -7,8 +7,8 @@
 
 .appcontainer{
   width: 100%;
-  height: 100vh;
-  background-color:#001528 !important;
+  height: 100%;
+  background-color:#15314b !important;
   margin-left: 0px;
- 
+  padding: 0px 20px !important;
 }
