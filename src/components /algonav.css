@@ -143,25 +143,39 @@
 
 .container{
     margin: 0px 20px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     margin: auto;
 }
 
-
-/* .n2{
-    margin-left: 20px;
+.dropdown-menu{
+    margin-top: 10px !important;
 }
- */
-/* .container{
-    display: flex;
-    justify-content: space-between;
-} */
 
+#basic-nav-dropdown{
+    z-index: 999;
+   
+ 
+}
 
+.show{
+   
+    padding: 0px;
+    
+    /* border-radius: 28px; */
+  
+}
 
-
-
-
+.droplink {
+    width: 158px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #15314b;
+    /* border: 1px solid red; */
+    /* margin: 3px; */
+    border-radius: 30p;
+    /* margin: auto; */
+}
 
 
 @media only screen and (max-width: 600px) {

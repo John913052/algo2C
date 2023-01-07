@@ -2,7 +2,7 @@ import React from 'react'
 
 const MakeF3 = () => {
   return (
-    <div>MakeF3</div>
+    <div>Solution</div>
   )
 }
 

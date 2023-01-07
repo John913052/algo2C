@@ -1,8 +1,11 @@
+import { Container, Textarea } from '@chakra-ui/react'
 import React from 'react'
 
 const MakeF2 = () => {
   return (
-    <div>MakeF2</div>
+    <Container mt={'10px'} pl={'15px'}>
+      <Textarea placeholder='Write whatever you want.' bgColor={'#15314b'} width={'100%'}></Textarea>
+    </Container>
   )
 }
 

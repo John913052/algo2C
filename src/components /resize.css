@@ -15,6 +15,8 @@ body.reflex-col-resize {
     /* TWEENER - IE 10 */
     /* NEW - Chrome */
     display: flex;
+
+    
     position: relative;
     height: 100%;
     width: 100%; }
@@ -69,12 +71,17 @@ body.reflex-col-resize {
   
   .reflex-container.horizontal > .reflex-splitter:hover,
   .reflex-container.horizontal > .reflex-splitter.active {
-    border-bottom: 1px solid #eeeeee;
-    border-top: 1px solid #eeeeee; }
+    /* border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;  */
+    border-bottom: 1px solid #15314b;
+    border-top: 1px solid #15314b;
+  }
   
   .reflex-container.vertical > .reflex-splitter {
-    border-right: 1px solid #c6c6c6;
-    border-left: 1px solid #c6c6c6;
+    /* border-right: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6; */
+    border-bottom: 1px solid #15314b;
+    border-top: 1px solid #15314b;
     cursor: col-resize;
     height: 100%;
     width: 2px; }

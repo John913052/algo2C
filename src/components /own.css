@@ -1,7 +1,3 @@
-/* .leftr{
-    width: 300px;
-    height: auto;
-} */
 
 
 .linkr1,.linkr2,.linkr3,.linkr4{
@@ -24,8 +20,8 @@
 
 
 .reflex-container.vertical > .reflex-splitter {
-    border-right: 1px solid #c6c6c6;
-    border-left: 1px solid #c6c6c6;
+    border-bottom: 1px solid #15314b !important;
+    border-top: 1px solid #15314b !important;
     cursor: col-resize;
     height: 100%;
     width: 17px !important;
@@ -41,8 +37,8 @@
 
 /* Demo Component */
 .horizontal > .reflex-splitter {
-    border-bottom: 1px solid #c6c6c6;
-    border-top: 1px solid #c6c6c6;
+    border-bottom: 1px solid #15314b;
+    border-top: 1px solid #15314b;
     cursor: row-resize;
     width: 100%;
     height: 17px !important;
@@ -63,3 +59,34 @@
   .runcode{
     background-color: #0046c7 !important;
   }
+
+
+  .reflex-container > .reflex-element {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+/* makefun css */
+
+
+/* mainf1 csss */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+

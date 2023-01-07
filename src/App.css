@@ -3,6 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
   color: white !important;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .appcontainer{
@@ -11,4 +12,8 @@
   background-color:#15314b !important;
   margin-left: 0px;
   padding: 0px 20px !important;
+}
+
+#basic-nav-dropdown{
+  z-index: 999;
 }
