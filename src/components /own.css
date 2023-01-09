@@ -1,4 +1,7 @@
-
+*{
+  font-family: 'Open Sans', sans-serif;
+  
+}
 
 .linkr1,.linkr2,.linkr3,.linkr4{
     width: auto;
@@ -25,7 +28,8 @@
     cursor: col-resize;
     height: 100%;
     width: 17px !important;
-    background-color:#15314b !important;
+    /* background-color:#15314b !important; */
+    background-color:#02203c!important;
 }
 .reflex-container.vertical > .reflex-splitter:hover{
     background-color: #626ee3 !important;
@@ -42,7 +46,8 @@
     cursor: row-resize;
     width: 100%;
     height: 17px !important;
-    background-color: #15314b;
+    /* background-color: #15314b; */
+    background-color:#02203c!important;
 }
 
 .horizontal > .reflex-splitter:hover{
