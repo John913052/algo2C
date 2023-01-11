@@ -7,8 +7,8 @@
     /* border: 1px solid red; */
     padding: 0px;
     margin-top: 0px;
-    
-    background-color:#001528 !important;
+    background: transparent;
+    background-color:#02203c !important;
     
 }
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
@@ -47,6 +47,28 @@
     font-weight: 600;
     height: 40px;
 }
+.linktime{
+    width: 120px;
+    /* border: 1px solid red; */
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+}
+
+.timer{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.setflex{
+    justify-content: center;
+}
+
 .linkt{
     width: 150px;
     /* border: 1px solid red; */
@@ -125,8 +147,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 15px 0 0;
-    margin: 0 15px 0 0;
+    /* padding: 0 15px 0 0;
+    margin: 0 15px 0 0; */
     font-size: 16px;
     font-weight: 600;
 }
@@ -145,15 +167,16 @@
     background-color: #626ee3;
 }
 
-.link1:hover,.link2:hover,.link3:hover,.link4:hover,.link5:hover,.link6:hover,.linkt:hover{
+.link1:hover,.link2:hover,.link3:hover,.link4:hover,.link5:hover,.link6:hover,.linkt:hover,.linktime:hover{
     background-color: #626ee3
 }
-.link1,.link2,.link3,.link4,.link5,.link6,.linkt{
+.link1,.link2,.link3,.link4,.link5,.link6,.linkt,.linktime{
     background-color: #15314b;
     border-radius: 4px;
+    cursor: pointer;
 
 }
-.link1,.link2,.link3,.link4,.link5,.link6{
+.link1,.link2,.link3,.link4,.link5,.link6,.linktime{
     font-size:14px !important;
 }
 

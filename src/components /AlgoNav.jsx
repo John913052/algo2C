@@ -2,12 +2,18 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useDisclosure } from '@chakra-ui/react';
+// import { useState } from 'react';
+import { useRef } from 'react';
 
 import './algonav.css'
+import Timer from './subcompo/Timer';
+import Settingicon from './subcompo/Settingicon';
 
 function AlgoNav() {
   return (
     <>
+
       <Navbar bg="light" expand="lg" className='sticky-top algonav'>
         <Container className='container'>
           <Navbar.Brand href="https://www.algoexpert.io/product" className='navtitle linkt'>Hi-Counselor</Navbar.Brand>
@@ -43,10 +49,13 @@ function AlgoNav() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link" className='link4'><i className="fa-sharp fa-solid fa-share-nodes"></i></Nav.Link>
+                  <Timer></Timer>
             </Nav>
             <Nav className='n2'>
               <Nav.Link href="#link" className='link5'><i className="fa-solid fa-bug"></i></Nav.Link>
-              <Nav.Link href="#link" className='link6'><i className="fa-solid fa-gear"></i></Nav.Link>
+              <Settingicon></Settingicon>
+              {/* <Nav.Link href="#link" className='link6' > <i className="fa-solid fa-gear"></i></Nav.Link> */}
+            
             </Nav>
           </Navbar.Collapse>
         </Container>
