@@ -6,7 +6,7 @@ import { useDisclosure } from '@chakra-ui/react';
 // import { useState } from 'react';
 import { useRef } from 'react';
 
-import './algonav.css'
+import './algonav.css';
 import Timer from './subcompo/Timer';
 import Settingicon from './subcompo/Settingicon';
 
@@ -49,10 +49,14 @@ function AlgoNav() {
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link" className='link4'><i className="fa-sharp fa-solid fa-share-nodes"></i></Nav.Link>
+      
+
                   <Timer></Timer>
+            
             </Nav>
             <Nav className='n2'>
               <Nav.Link href="#link" className='link5'><i className="fa-solid fa-bug"></i></Nav.Link>
+              
               <Settingicon></Settingicon>
               {/* <Nav.Link href="#link" className='link6' > <i className="fa-solid fa-gear"></i></Nav.Link> */}
             

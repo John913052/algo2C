@@ -1,5 +1,6 @@
 import React from 'react';
-import { IconButton, useDisclosure } from '@chakra-ui/react';
+import { Box, IconButton, useDisclosure } from '@chakra-ui/react';
+import './timer.css'
 import {
     AlertDialog,
     AlertDialogBody,
@@ -17,16 +18,19 @@ const Timer = () => {
   
     return (
       <>
+  
         <AlertDialog
           motionPreset='slideInBottom'
           leastDestructiveRef={cancelRef}
           onClose={onClose}
           isOpen={isOpen}
           isCentered
+          
+          
         >
-          <AlertDialogOverlay />
+          <AlertDialogOverlay  />
   
-          <AlertDialogContent>
+          <AlertDialogContent width={'200px'}>
             <AlertDialogHeader>Discard Changes?</AlertDialogHeader>
             <AlertDialogCloseButton />
             <AlertDialogBody>
@@ -43,10 +47,12 @@ const Timer = () => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
-            <div className='timer linktime'  onClick={onOpen}>
-                <i class="fa-solid fa-clock"></i>
+            <Box className='timer linktime'  onClick={onOpen}
+              
+            >
+                <i className="fa-solid fa-clock"></i>
                 <span>00:00:00</span>
-            </div>
+            </Box>
       </>
     )
 }

@@ -8,7 +8,8 @@ import AlgoNav from './components /AlgoNav'
 // import Second from './components /Second';
 // import Resize from './components /Resize';
 import Demo from './components /Demo';
-import Dslider from './components /drawers /Dslider'
+// import Navbar from './components /dumy/Navbar';
+
 // import Promote from './components /Promote';
 // import { Container } from 'react-bootstrap';
 // import 'react-reflex/style.css';
@@ -18,6 +19,7 @@ const App = () => {
     <div className='appcontainer'>
       {/* <Dslider></Dslider> */}
       <AlgoNav></AlgoNav>
+      {/* <Navbar></Navbar> */}
       {/* <Resize></Resize> */}
       {/* <Algodiv></Algodiv> */}
       {/* <Downside></Downside>

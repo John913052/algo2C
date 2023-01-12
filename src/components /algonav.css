@@ -33,6 +33,7 @@
     position: absolute;
     right: 0px;
     font-size:14px !important;
+    z-index: 9999;
 }
 
 .link1{
@@ -58,11 +59,14 @@
     font-size: 16px;
     font-weight: 600;
     height: 40px;
+ 
 }
 
 .timer{
     display:flex;
     justify-content: space-evenly;
+    left: 50%;
+    top: 40px;
 }
 
 .setflex{
@@ -218,6 +222,7 @@
     border-radius: 30p;
     /* margin: auto; */
 }
+/* timer  */
 
 
 @media only screen and (max-width: 600px) {
