@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiChevronDown } from "react-icons/fi";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import {
   Drawer,
   DrawerBody,
@@ -40,6 +44,7 @@ import { useRef } from 'react';
 const Settingicon = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
+  const [dlinks,setlinks]=useState('JavaScript')
   return (
     <>
 
@@ -53,38 +58,133 @@ const Settingicon = () => {
 
       >
         <DrawerOverlay />
-        <DrawerContent bgColor={'var(--blueback)'} >
+        <DrawerContent bgColor={'var(--blueback)'} className='maingrid' >
           <DrawerCloseButton _hover={{ bgColor: "red" }} width={'55px'} height={'40px'} bgColor={'var(--blueback)'} ml={'-20px'} />
           <DrawerHeader mt={'20px'} mb={'20px'}>
             <Heading as='h3' fontWeight={'400'} lineHeight={'1.3'}
               fontSize={'18px'}>Workspace Setting</Heading>
           </DrawerHeader>
 
-          <DrawerBody>
-            <SimpleGrid columns={2} spacingX='50px' spacingY='20px'>
-              <Box bg='tomato' height='50px' width={'200px'}><Heading as={'h4'}>Theme</Heading></Box>
-              <Box bg='tomato' height='50px' width={'200px'}>Theme</Box>
-              
-              <Box bg='tomato' height='50px' width={'200px'}>
-                  <Menu>
-                    <MenuButton as={Button} rightIcon={<FiChevronDown />}>
-                      Actions
-                    </MenuButton>
-                    <MenuList>
-                      <MenuItem>Download</MenuItem>
-                      <MenuItem>Create a Copy</MenuItem>
-                      <MenuItem>Mark as Draft</MenuItem>
-                      <MenuItem>Delete</MenuItem>
-                      <MenuItem>Attend a Workshop</MenuItem>
-                    </MenuList>
-                  </Menu>
-              </Box>
-              <Box bg='tomato' height='50px' width={'200px'}></Box>
-              <Box bg='tomato' height='50px' width={'200px'}></Box>
-              <Box bg='tomato' height='50px' width={'200px'}></Box>
-              <Box bg='tomato' height='50px' width={'200px'}></Box>
-            </SimpleGrid>
-          </DrawerBody>
+
+          <SimpleGrid columns={2} spacingX='20px' spacingY='20px' textAlign={'center'} justifyContent={'center'}>
+            <Box className='boxst2'>Theme</Box>
+            <Box className='boxst'>D&L</Box>
+            <Box className='boxst2'>Layout</Box>
+            <Box className='boxst'>
+            <NavDropdown title={dlinks} id="basic-nav-dropdown" className='settinglink'>
+                
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
+                  C#
+                </NavDropdown.Item>
+               
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
+                  C++
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
+                  Go Lang
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                  Java
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
+                  Python
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
+                  kotlin
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
+                  TypeScript
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Box>
+            <Box className='boxst2'>Font Size</Box>
+            <Box className='boxst'>
+            <NavDropdown title={dlinks} id="basic-nav-dropdown" className='settinglink'>
+                
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
+                  C#
+                </NavDropdown.Item>
+               
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
+                  C++
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
+                  Go Lang
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                  Java
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
+                  Python
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
+                  kotlin
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
+                  TypeScript
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Box>
+            <Box className='boxst2'>Editor Theme</Box>
+            <Box className='boxst'>
+            <NavDropdown title={dlinks} id="basic-nav-dropdown" className='settinglink'>
+                
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
+                  C#
+                </NavDropdown.Item>
+               
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
+                  C++
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
+                  Go Lang
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                  Java
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
+                  Python
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
+                  kotlin
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
+                  TypeScript
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Box>
+            <Box className='boxst2'>Editor Key Maps</Box>
+            <Box className='boxst'>
+            <NavDropdown title={dlinks} id="basic-nav-dropdown" className='settinglink'>
+                
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
+                  C#
+                </NavDropdown.Item>
+               
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
+                  C++
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
+                  Go Lang
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                  Java
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
+                  Python
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
+                  kotlin
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
+                  TypeScript
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Box>
+            <Box className='boxst2'>Whiteboard Mode</Box>
+            <Box className='boxst'>on off</Box>
+          </SimpleGrid>
+
         </DrawerContent>
       </Drawer>
       <Box className='link6 setflex' ref={btnRef} onClick={onOpen}>
