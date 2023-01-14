@@ -9,6 +9,7 @@ import { useRef } from 'react';
 import './algonav.css';
 import Timer from './subcompo/Timer';
 import Settingicon from './subcompo/Settingicon';
+import Question from './question/Question';
 
 function AlgoNav() {
   const [dlinks,setlinks]=useState('JavaScript')

@@ -1,24 +1,17 @@
-const btntheme=(state,action)=>{
-    switch(action.type){
-        case 'dark':
-            state="#626ee3";
-            break;
-        default:
-            state='#15314b'
+const btntheme=(state1,action)=>{
+    if(action.type=='dark'){
+        return state1?'#15314b':'#15314b'
     }
-    return state
+    return state1
+}
+const btnonff=(state2,action)=>{
+    if(action.type=='on'){
+        return state2?'#15314b':'#15314b'
+    }
+    return state2
 }
 
-const btntheme1=(state,action)=>{
-    switch(action.type){
-        case 'sun':
-            state='#626ee3';
-            break;
-        default:
-            state='#15314b'
-    }
-    return state
-}
+
 
 const Font1=(state,action)=>{
     switch(action.type){
@@ -93,4 +86,4 @@ const editorkey=(state,action)=>{
 
 
 
-export {btntheme, btntheme1,Font1,editorthem,editorkey};
+export {btntheme,Font1,editorthem,editorkey,btnonff};

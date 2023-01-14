@@ -42,7 +42,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { useDisclosure } from '@chakra-ui/react';
 import './setting.css';
 // import  from '../reducers /Btnc';
-import {btntheme1 ,btntheme,Font1,editorthem,editorkey}from '../reducers /Btnc';
+import {btntheme,Font1,editorthem,editorkey,btnonff}from '../reducers /Btnc';
 // import { useState } from 'react';
 import { useRef } from 'react';
 const Settingicon = () => {
@@ -51,11 +51,13 @@ const Settingicon = () => {
   const [dlinks,setlinks]=useState('JavaScript')
   // const [font1,setfont2]=useState('1x')
   const initial='#15314b'
+  const initialc='#15314b'
   const inifont='0.8'
   const inieditor='Monokai'
   const inieditorkey='Sublime'
   const [changecolor,dispatch]=useReducer(btntheme,initial);
-  const [changecolor1,dispatch1]=useReducer(btntheme1,initial);
+  const [offcolor,dispatchc]=useReducer(btnonff,initialc);
+  // const [changecolor1,dispatch1]=useReducer(btntheme1,initial);
   const [font1,dispatchf]=useReducer(Font1,inifont);
   const [editor,dispatche]=useReducer(editorthem,inieditor);
   const [editorkey1,dispatchkey]=useReducer(editorkey,inieditorkey);
@@ -88,7 +90,7 @@ const Settingicon = () => {
             <Button leftIcon={<BsMoon />} bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'onClick={()=>dispatch({type:'dark'})}>
                 Dark
               </Button>
-            <Button leftIcon={<BsSun />} bgColor={changecolor1} colorScheme='teal' variant='solid' className='boxst3'onClick={()=>dispatch1({type:'sun'})}>
+            <Button leftIcon={<BsSun />}  bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'onClick={()=>dispatch({type:'sun'})}>
                 Light
               </Button>
 
@@ -187,10 +189,10 @@ const Settingicon = () => {
             </Box>
             <Box className='boxst2'>Whiteboard Mode</Box>
             <Box className='boxst4'>
-              <Button bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'>
+              <Button bgColor={offcolor} colorScheme='teal' variant='solid' className='boxst3' onClick={()=>dispatchc({type:"on"})}>
                   On
                 </Button>
-              <Button  bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'>
+              <Button  bgColor={offcolor} colorScheme='teal' variant='solid' className='boxst3' onClick={()=>dispatchc({type:"off"})}>
                   Off
                 </Button>
             </Box>

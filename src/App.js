@@ -8,6 +8,7 @@ import AlgoNav from './components /AlgoNav'
 // import Second from './components /Second';
 // import Resize from './components /Resize';
 import Demo from './components /Demo';
+import Question from './components /question/Question';
 // import Navbar from './components /dumy/Navbar';
 
 // import Promote from './components /Promote';
@@ -18,13 +19,14 @@ const App = () => {
   return (
     <div className='appcontainer'>
       {/* <Dslider></Dslider> */}
-      <AlgoNav></AlgoNav>
+      {/* <AlgoNav></AlgoNav> */}
       {/* <Navbar></Navbar> */}
       {/* <Resize></Resize> */}
       {/* <Algodiv></Algodiv> */}
       {/* <Downside></Downside>
       <Second></Second> */}
-      <Demo></Demo>
+      {/* <Demo></Demo> */}
+      <Question></Question>
       {/* <Promote></Promote> */}
   
     </div>

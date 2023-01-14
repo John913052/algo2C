@@ -8,6 +8,7 @@
     right: 0px;
     top: 0px;
     bottom: 0px;
+    height: 100vh !important;
     width: 35% !important;
     z-index: 9999 !important;
     transform: translateX(0%) translateY(0px) translateZ(0px);

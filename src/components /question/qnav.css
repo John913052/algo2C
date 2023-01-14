@@ -1,0 +1,18 @@
+.qnavbtn{
+    display: block !important;
+    /* color: rgb(218, 45, 45) !important; */
+    margin-right: 30px !important;
+    /* border: 1px solid red !important; */
+    
+}
+.qnavbtn:hover{
+    text-decoration: underline !important;
+
+}
+
+/* .qnavbtn::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid rgb(255, 255, 255);
+} */
+/* sx={{ my: 2, color: 'white', display: 'block',border:"1px solid red",mr:"20px" }} */

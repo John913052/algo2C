@@ -4,16 +4,19 @@
   box-sizing: border-box;
   color: white !important;
   font-family: 'Open Sans', sans-serif;
+
+  
 }
 
 :root {
   --blueback: #02203c;
   --compoback: #001528;
   --hovertab:#626ee3;
+  --questionback:#021f3a;
 }
 .appcontainer{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color:var(--blueback)!important;
   
   margin-left: 0px;
