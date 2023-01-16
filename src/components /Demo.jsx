@@ -7,10 +7,10 @@ import MakeF1 from './firstleft/MakeF1';
 import Yoursolution from './SecondLsft.jsx/Yoursolution';
 import Customop from './Lastright/Customop';
 import { useReducer } from 'react';
-import Handelstate from './reducers /MainFun';
-import Handelstate2 from './reducers /Handelstate2';
-import Handelstate3 from './reducers /Handelstate3';
-import Handelstate4 from './reducers /handelstate4';
+import Handelstate from './reducers/MainFun';
+import Handelstate2 from './reducers/Handelstate2';
+import Handelstate3 from './reducers/Handelstate3';
+import Handelstate4 from './reducers/handelstate4';
 
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Button, HStack } from '@chakra-ui/react'
 
