@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import React from 'react';
 import './qnav.css'
+import Hovertab from './Hovertab';
 
 
 
@@ -26,7 +27,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 
-const Qnav = () => {
+const Qnav = ({title}) => {
   const [anchorElNav, setAnchorElNav] =useState(null);
   const [anchorElUser, setAnchorElUser] =useState(null);
     const handleOpenNavMenu = (event) => {
@@ -68,10 +69,11 @@ const Qnav = () => {
               HiCounSelor
             </Typography>
             <Boxm sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
-              <Button   sx={{ my: 2}} className='qnavbtn' >Products</Button>
-              <Button   sx={{ my: 2}} className='qnavbtn' >purchase</Button>
-              <Button   sx={{ my: 2}} className='qnavbtn' >Team</Button>
-              <Button   sx={{ my: 2}} className='qnavbtn' >Content</Button>
+              {/* <Button   sx={{ my: 2}} className='qnavbtn'>Products</Button> */}
+              <Hovertab title='Products'></Hovertab>
+              <Hovertab title='Purchase'></Hovertab>
+              <Hovertab title='Team'></Hovertab>
+              <Hovertab title='Content'></Hovertab>
             </Boxm>
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
