@@ -1,4 +1,4 @@
-import Yoursolution from "../SecondLsft.jsx/Yoursolution";
+import Yoursolution from "../SecondLsft/Yoursolution";
 const Handelstate3=(state,action)=>{
     switch(action.type){
         case 'fun8':
