@@ -10,6 +10,33 @@
 
 }
 
+.menuitem{
+    top: 15px !important;
+
+    padding: 0px !important;
+    display: block !important;
+    
+}
+.menuitem ul{
+    
+    padding: 0px;
+    border-radius: 3px;
+    color: black !important;
+}
+
+.menuitemlist p{
+    background-color:white !important;
+    color: black !important;
+
+
+}
+.menuitemlist{
+    width: 290px !important;
+    transform: translate();
+}
+/* .menuitemlist:hover{
+    background-color: var( --hovertab) !important;
+} */
 /* .qnavbtn::after{
     content: "";
     display: block;
