@@ -1,4 +1,4 @@
-import { color } from '@chakra-ui/react';
+import { border, color } from '@chakra-ui/react';
 // import styled from '@emotion/styled';
 import { AppBar,Box ,Toolbar,IconButton,Typography, Container,Menu ,Avatar,Button,Tooltip,MenuItem  } from '@mui/material';
 import { useState } from 'react';
@@ -8,12 +8,14 @@ import AdbIcon from '@mui/icons-material/Adb';
 import React from 'react';
 import './qnav.css'
 import Hovertab from './Hovertab';
+import { Circle } from '@mui/icons-material';
+import { textAlign } from '@mui/system';
 
 
 
 const Sappbar=styled(AppBar)`
   background:#021f3a;
-  height:100%
+
 
 `;
 const Boxm=styled(Box)`
@@ -21,26 +23,15 @@ const Boxm=styled(Box)`
   align-items: flex-end;
   
 `;
-const pages = ['Products', 'Content', 'Team','purchase'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-
-
 
 const Qnav = ({title}) => {
-  const [anchorElNav, setAnchorElNav] =useState(null);
+
   const [anchorElUser, setAnchorElUser] =useState(null);
-    const handleOpenNavMenu = (event) => {
-      setAnchorElNav(event.currentTarget);
-    };
+
     const handleOpenUserMenu = (event) => {
       setAnchorElUser(event.currentTarget);
     };
-  
-    const handleCloseNavMenu = () => {
-      setAnchorElNav(null);
-    };
-  
+
     const handleCloseUserMenu = () => {
       setAnchorElUser(null);
     };
@@ -68,21 +59,27 @@ const Qnav = ({title}) => {
             >
               HiCounSelor
             </Typography>
+
+            {/* nav list tab */}
+
             <Boxm sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
               {/* <Button   sx={{ my: 2}} className='qnavbtn'>Products</Button> */}
               <Hovertab title='Products'></Hovertab>
               <Hovertab title='Purchase'></Hovertab>
-              <Hovertab title='Team'></Hovertab>
-              <Hovertab title='Content'></Hovertab>
+              <Button   sx={{ my: 2}} className='qnavbtn'>Team</Button>
+              <Button   sx={{ my: 2}} className='qnavbtn'>Content</Button>
             </Boxm>
-            <Box sx={{ flexGrow: 0 }}>
+            
+            {/* nav list tab */}
+            
+            <Box sx={{ flexGrow: 0}}>
               <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <IconButton onMouseEnter={handleOpenUserMenu} sx={{ p: 0 ,backgroundColor:'blue'}}>
+                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'blue'}}/>
                 </IconButton>
               </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
+              <Menu className='menuitem'
+                sx={{ mt: '45px',border:'1px solid red'}}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
                 anchorOrigin={{
@@ -97,11 +94,89 @@ const Qnav = ({title}) => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
+               
+              {/* profile tab  */}
+                <MenuItem  onClick={handleCloseUserMenu} className="menuitemlist">
+                  <Box clssName='menuitemlist' sx={{width:"290px"}}>
+                    <Box>
+                      <Typography>Welcome, Sandeep!</Typography>
+                      <Typography>You're on a Google account.</Typography>
+                    </Box>
+                    <Box sx={{
+                        width:"250px",
+                        display:'flex',
+                        flexWrap:'wrap',
+                        justifyContent:'space-evenly',
+                        alignItems:'center',
+                        border:"1px solid red",
+                        marginTop:"20px",
+                        flexDirection:"column"
+          
+                      }}>
+                        <Typography>Products servies</Typography>
+                      <Box sx={{
+                        display:'flex',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 50,
+                        backgroundColor:'red',
+                        justifyContent:'center',
+                        alignItems:'center',
+                        
+                      }}>
+                        hi
+                      </Box>
+                      <Box sx={{
+                        display:'flex',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 50,
+                        backgroundColor:'red',
+                        justifyContent:'center',
+                        alignItems:'center'
+                      }}>
+                        hi
+                      </Box>
+                      <Box sx={{
+                        display:'flex',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 50,
+                        backgroundColor:'red',
+                        justifyContent:'center',
+                        alignItems:'center'
+                      }}>
+                        hi
+                      </Box>
+                      <Box sx={{
+                        display:'flex',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 50,
+                        backgroundColor:'red',
+                        justifyContent:'center',
+                        alignItems:'center'
+                      }}>
+                        hi
+                      </Box>
+                      <Box sx={{
+                        display:'flex',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 50,
+                        backgroundColor:'red',
+                        justifyContent:'center',
+                        alignItems:'center'
+                      }}>
+                        hi
+                      </Box>
+                   
+                    </Box>
+                  </Box>
+                </MenuItem>
+          
+             {/* profile tab  */}
+
               </Menu>
             </Box>
           </Toolbar>

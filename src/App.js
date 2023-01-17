@@ -10,28 +10,41 @@ import AlgoNav from './components /AlgoNav'
 import Demo from './components /Demo';
 import Question from './components /question/Question';
 // import Navbar from './components /dumy/Navbar';
+import LastSection from './components /question/LastSection';
 
 // import Promote from './components /Promote';
 // import { Container } from 'react-bootstrap';
 // import 'react-reflex/style.css';
-
 const App = () => {
   return (
-    <div className='appcontainer'>
-      {/* <Dslider></Dslider> */}
-      {/* <AlgoNav></AlgoNav> */}
-      {/* <Navbar></Navbar> */}
-      {/* <Resize></Resize> */}
-      {/* <Algodiv></Algodiv> */}
-      {/* <Downside></Downside>
-      <Second></Second> */}
-      {/* <Demo></Demo> */}
-      <Question></Question>
-      {/* <Promote></Promote> */}
-  
-    </div>
-      
- 
+    <>
+      <div className='appcontainer'>
+        {/* <Dslider></Dslider> */}
+        {/* <AlgoNav></AlgoNav> */}
+        {/* <Navbar></Navbar> */}
+        {/* <Resize></Resize> */}
+        {/* <Algodiv></Algodiv> */}
+        {/* <Downside></Downside>
+        <Second></Second> */}
+        {/* <Demo></Demo> */}
+        {/* <Promote></Promote> */}
+        <Question></Question>
+      </div>
+      <div className='appcontainer2'>
+        {/* <Dslider></Dslider> */}
+        {/* <AlgoNav></AlgoNav> */}
+        {/* <Navbar></Navbar> */}
+        {/* <Resize></Resize> */}
+        {/* <Algodiv></Algodiv> */}
+        {/* <Downside></Downside>
+        <Second></Second> */}
+        {/* <Demo></Demo> */}
+        {/* <Promote></Promote> */}
+        <LastSection></LastSection>
+      </div>
+    </>
+
+
   )
 }
 
