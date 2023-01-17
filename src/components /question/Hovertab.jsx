@@ -28,11 +28,17 @@ export default function Hovertab(props) {
         id={id}
         open={open}
         anchorEl={anchorEl}
-        onMouseLeave={handleClose}
+        onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'left',
+          horizontal: 'center',
+      
         }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
+        className='hoverpop'
       >
         <HoverGrid></HoverGrid>
       </Popover>
