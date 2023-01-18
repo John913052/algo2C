@@ -98,7 +98,7 @@
 
 
 
-.navtab1{
+/* .navtab1{
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -109,8 +109,8 @@
   position: fixed;
   width: 49%;
   top: 58px;
-}
-.navtab2{
+} */
+/* .navtab2{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +120,7 @@
   position: fixed !important;
   width: 49%;
   top:56%;
-} 
+}  */
 
 
 /* .navtab3{
@@ -134,7 +134,7 @@
   width: 49%;
   top: 300px;
 }  */
-.navtab4{
+/* .navtab4{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -144,4 +144,4 @@
   position: fixed !important;
   width: 47.8%;
   top:56%;
-} 
+}  */

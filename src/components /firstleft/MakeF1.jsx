@@ -11,7 +11,7 @@ import './makef1.css'
 
 const MakeF1 = () => {
   return (
-    <Container width={'100%'} flexWrap={'wrap'} mt={'60px'}>
+    <Container width={'100%'} flexWrap={'wrap'}>
       {/* overflow={'hidden'} add whenever needed */}
       
       <HStack mt={'10px'}>

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Test = () => {
   return (
-    <Container  mt={'60px'}>
+    <Container >
       Texttttt
     </Container>
   )
