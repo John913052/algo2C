@@ -5,40 +5,25 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BsMoon,BsSun} from 'react-icons/bs';
+import './setting.css'
 
 import {
   Drawer,
-  DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   Button,
-  Input,
-  Flex,
-  IconButton,
-  Avatar,
+
   SimpleGrid,
-  VStack,
-  GridItem,
-  Text,
-  HStack,
-  Stack,
+
   Box,
   Heading,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider
+
 } from '@chakra-ui/react'
 
 
-import { FiAlignJustify } from "react-icons/fi";
+
 import { useDisclosure } from '@chakra-ui/react';
 import './setting.css';
 // import  from '../reducers /Btnc';
@@ -76,8 +61,8 @@ const Settingicon = () => {
 
       >
         <DrawerOverlay />
-        <DrawerContent bgColor={'var(--blueback)'} className='maingrid' >
-          <DrawerCloseButton _hover={{ bgColor: "red" }} width={'55px'} height={'40px'} bgColor={'var(--blueback)'} ml={'-20px'} />
+        <DrawerContent bgColor={'var(--blueback)'} className='maingridsetting' >
+          <DrawerCloseButton _hover={{ bgColor: "#626ee3" ,color:"red"}} width={'40px'} height={'40px'} bgColor={'var(--blueback)'} ml={'-20px'} outline={"none" } border={'none'}/>
           <DrawerHeader mt={'20px'} mb={'20px'}>
             <Heading as='h3' fontWeight={'400'} lineHeight={'1.3'}
               fontSize={'18px'}>Workspace Setting</Heading>

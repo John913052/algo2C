@@ -11,6 +11,7 @@ import Demo from './components /Demo';
 import Question from './components /question/Question';
 // import Navbar from './components /dumy/Navbar';
 import LastSection from './components /question/LastSection';
+import { Routes,BrowserRouter,Route } from 'react-router-dom';
 
 // import Promote from './components /Promote';
 // import { Container } from 'react-bootstrap';
@@ -18,30 +19,12 @@ import LastSection from './components /question/LastSection';
 const App = () => {
   return (
     <>
+    
       <div className='appcontainer'>
-        {/* <Dslider></Dslider> */}
-        {/* <AlgoNav></AlgoNav> */}
-        {/* <Navbar></Navbar> */}
-        {/* <Resize></Resize> */}
-        {/* <Algodiv></Algodiv> */}
-        {/* <Downside></Downside>
-        <Second></Second> */}
-        {/* <Demo></Demo> */}
-        {/* <Promote></Promote> */}
-        <Question></Question>
+        <AlgoNav></AlgoNav>
+        <Demo></Demo>
       </div>
-      <div className='appcontainer2'>
-        {/* <Dslider></Dslider> */}
-        {/* <AlgoNav></AlgoNav> */}
-        {/* <Navbar></Navbar> */}
-        {/* <Resize></Resize> */}
-        {/* <Algodiv></Algodiv> */}
-        {/* <Downside></Downside>
-        <Second></Second> */}
-        {/* <Demo></Demo> */}
-        {/* <Promote></Promote> */}
-        <LastSection></LastSection>
-      </div>
+      {/* className='appcontainer2' */}
     </>
 
 
@@ -49,3 +32,14 @@ const App = () => {
 }
 
 export default App
+
+{/* <BrowserRouter>
+<Demo></Demo>
+<AlgoNav />
+<Routes>
+    <Route path="/questions" element={<Question/>} />
+    <Route path="contact" element={<Contact />} />
+    <Route path="*" element={<NoPage />} />
+</Routes>
+</BrowserRouter> */}
+

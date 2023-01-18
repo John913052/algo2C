@@ -33,16 +33,16 @@ const Demo = () => {
   const [state4, dispatch4] = useReducer(Handelstate4, initialValue4)
 
   return (
-    <ReflexContainer orientation="vertical" style={{ height: '90vh', marginTop: '20px' }} className='resize'>
+    <ReflexContainer orientation="vertical" style={{ height: '88vh', marginTop: '20px' }} className='resize'>
 
       <ReflexElement >
 
-        <ReflexContainer orientation="horizontal">
+        <ReflexContainer orientation="horizontal" >
 
-          <ReflexElement
+          <ReflexElement 
             name="appPane">
-            <Tabs size='md' variant='enclosed' fontSize={'14px'}>
-              <TabList bgColor={'#15314b'} height={40}>
+            <Tabs size='md' variant='enclosed' fontSize={'14px'}  >
+              <TabList bgColor={'#15314b'} height={40} className='navtab1'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'80px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch({ type: 'fun1' })} >Prompt</Tab>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'108px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch({ type: 'fun2' })} >Scratchpad</Tab>
               </TabList>
@@ -71,9 +71,9 @@ const Demo = () => {
           <ReflexSplitter />
 
           <ReflexElement className="bottom-pane">
-            <Tabs size='md' variant='enclosed'>
-              <TabList bgColor={'#15314b'} height={40} fontSize={'14px'}>
-                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'67px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch2({ type: 'fun5' })} >Test</Tab>
+            <Tabs size='md' variant='enclosed' >
+              <TabList bgColor={'#15314b'} height={40} fontSize={'14px'} className='navtab2'>
+                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'67px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'}  border={'none'} onClick={() => dispatch2({ type: 'fun5' })} >Test</Tab>
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'103px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun6'})} >QuickTest</Tab> */}
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'103px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun7'})} >Sandbox</Tab> */}
                 {/* <HStack > */}
@@ -126,7 +126,7 @@ const Demo = () => {
           <ReflexElement
             name="appPane">
             <Tabs size='md' variant='enclosed' fontSize={'14px'}>
-              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'}>
+              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'} className='navtab3'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch3({ type: 'fun8' })} >YourSolution</Tab>
                 <HStack >
                   {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
@@ -162,8 +162,8 @@ const Demo = () => {
 
           <ReflexElement className="bottom-pane">
             <Tabs size='md' variant='enclosed' fontSize={'14px'}>
-              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'}>
-                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch4({ type: 'fun9' })} >CustomOutput</Tab>
+              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'} className='navtab4'>
+                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch4({ type: 'fun9' })} className='navtab1'>CustomOutput</Tab>
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab> */}
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch4({type:'fun10'})} >Raw Output</Tab> */}

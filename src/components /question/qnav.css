@@ -110,9 +110,9 @@
     color: #02203c !important;
 }
 
-.itemgrid1 a,div p,h3{
+/* .itemgrid1 a,div p,h3{
     color: #02203c !important;
-}
+} */
 
 .itemgrid1:hover{
     background-color: aqua !important;

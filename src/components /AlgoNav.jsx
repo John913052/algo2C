@@ -18,11 +18,11 @@ function AlgoNav() {
 
       <Navbar bg="light" expand="lg" className='sticky-top algonav'>
         <Container className='container'>
-          <Navbar.Brand href="https://www.algoexpert.io/product" className='navtitle linkt'>Hi-Counselor</Navbar.Brand>
+          <Navbar.Brand href="/" className='navtitle linkt'>Hi-Counselor</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto Nav">
-              <Nav.Link href="https://www.algoexpert.io/questions" className='link1'><i className="fa-solid fa-bars"></i></Nav.Link>
+              <Nav.Link href="/question" target={'__blank'} className='link1'><i className="fa-solid fa-bars"></i></Nav.Link>
               <Nav.Link href="https://www.algoexpert.io/questions/river-sizes" className='link2'><i className="fa-solid fa-arrow-right-long"></i></Nav.Link>
               {/* <Nav.Link href="#link" className='link3'>Link</Nav.Link> */}
               <NavDropdown title={dlinks} id="basic-nav-dropdown" className='link3'>

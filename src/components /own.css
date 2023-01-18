@@ -95,3 +95,53 @@
     background: #555;
   }
 
+
+
+
+.navtab1{
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #15314b;
+  height: 40px;
+  position: fixed;
+  width: 49%;
+  top: 58px;
+}
+.navtab2{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #15314b;
+  height: 40px;
+  position: fixed !important;
+  width: 49%;
+  top:56%;
+} 
+
+
+/* .navtab3{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #15314b;
+  height: 40px;
+  position: fixed !important;
+  width: 49%;
+  top: 300px;
+}  */
+.navtab4{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #15314b;
+  height: 40px;
+  position: fixed !important;
+  width: 47.8%;
+  top:56%;
+} 
