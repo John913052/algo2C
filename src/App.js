@@ -6,20 +6,25 @@ import Demo from './components /Demo';
 import Question from './components /question/Question';
 import LastSection from './components /question/LastSection';
 import { Routes,BrowserRouter,Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './Redux/store'
 const App = () => {
   return (
     <>
     
       <div className='appcontainer'>
-        <BrowserRouter>
-        {/* <Demo></Demo> 
-        <AlgoNav /> */}
-        <Routes>
-            <Route path="/" element={<Demo></Demo>} />
-            <Route path="/question" element={ <Question />} />
-            {/* <Route path="*" element={<NoPage />} /> */}
-        </Routes>
-        </BrowserRouter>
+        <Provider store={store}>
+
+          <BrowserRouter>
+          {/* <Demo></Demo> 
+          <AlgoNav /> */}
+          <Routes>
+              <Route path="/" element={<Demo></Demo>} />
+              <Route path="/question" element={ <Question />} />
+              {/* <Route path="*" element={<NoPage />} /> */}
+          </Routes>
+          </BrowserRouter>
+        </Provider>
       </div>
       {/* className='appcontainer2' */}
     </>

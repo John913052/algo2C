@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -22,7 +22,9 @@ import AlgoNav from './AlgoNav';
 // import MakeF1 from './firstleft/MakeF1';
 // import MakeF2 from './firstleft/MakeF2';
 
-
+import { useDispatch } from 'react-redux';
+import { darklight } from '../Redux/Workspaceslice';
+import { useSelector } from 'react-redux';
 const Demo = () => {
   const initialValue = <MakeF1></MakeF1>
   const initialValue2 = <Test></Test>
@@ -32,6 +34,16 @@ const Demo = () => {
   const [state2, dispatch2] = useReducer(Handelstate2, initialValue2)
   const [state3, dispatch3] = useReducer(Handelstate3, initialValue3)
   const [state4, dispatch4] = useReducer(Handelstate4, initialValue4)
+  // const buttonRef=useRef()
+// const nobr=useSelector((state)=>state.WorkSetting1)
+// const [one,setone]=useState(1)
+
+//   const Dispatch=useDispatch('null')
+  
+//   const testing=()=>{
+//     setone(one)
+//     Dispatch(darklight(one))
+//   }
 
   return (
     <>
@@ -46,8 +58,10 @@ const Demo = () => {
             name="appPane">
             <Tabs size='md' variant='enclosed' fontSize={'14px'}  >
               <TabList bgColor={'#15314b'} height={40} className='navtab1'>
+                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'80px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => testing()}>Prompt</Tab>
+                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'108px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => testing()} >Scratchpad {nobr}</Tab> */}
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'80px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch({ type: 'fun1' })} >Prompt</Tab>
-                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'108px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch({ type: 'fun2' })} >Scratchpad</Tab>
+                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'108px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch({ type: 'fun2' })} >Scratchpad</Tab> */}
               </TabList>
               <TabPanels>
                 <TabPanel>
@@ -58,14 +72,13 @@ const Demo = () => {
 
                   </Container>
                 </TabPanel>
-                <TabPanel>
+                {/* <TabPanel>
                   <Container className='bottom'>
-                    {/* html or componet */}
-                    {/* <Demo></Demo> */}
+                 
                     {state}
 
                   </Container>
-                </TabPanel>
+                </TabPanel> */}
               </TabPanels>
             </Tabs>
 

@@ -1,8 +1,8 @@
 import React from 'react'
-
 const Customop = () => {
+
   return (
-    <div>Customop</div>
+    <div>Customop </div>
   )
 }
 
