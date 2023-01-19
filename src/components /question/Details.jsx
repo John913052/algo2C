@@ -10,7 +10,7 @@ const Details = () => {
     alignItems:'center',
     flexDirection:"column",
     width:"100%",
-    height:"426px"
+    height:"100vh"
     }}>
         <Typography variant="h1"  sx={{margin:"0px 0px 40px 0px",fontSize:'38px'}}>170 Coding Interview Questions</Typography>
         <Typography  variant="h4"  sx={{marginBottom:"0px 0px 60px 0px",fontSize:'17px'}}>The practice you need to ace the coding interviews.</Typography>

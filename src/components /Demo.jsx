@@ -18,6 +18,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Button, HStack } from '@chakra
 import './resize.css'
 import './own.css'
 import Test from './second/Test';
+import AlgoNav from './AlgoNav';
 // import MakeF1 from './firstleft/MakeF1';
 // import MakeF2 from './firstleft/MakeF2';
 
@@ -33,11 +34,13 @@ const Demo = () => {
   const [state4, dispatch4] = useReducer(Handelstate4, initialValue4)
 
   return (
-    <ReflexContainer orientation="vertical" style={{ height: '88vh', marginTop: '20px' }} className='resize'>
+    <>
+    <AlgoNav></AlgoNav>
+    <ReflexContainer orientation="vertical" style={{ height: '88vh', marginTop: '20px',display:"flex",flexWrap:"wrap" }} className='resize'>
 
-      <ReflexElement >
+      <ReflexElement>
 
-        <ReflexContainer orientation="horizontal" >
+        <ReflexContainer orientation="horizontal">
 
           <ReflexElement 
             name="appPane">
@@ -198,6 +201,7 @@ const Demo = () => {
 
       </ReflexElement>
     </ReflexContainer>
+    </>
   )
 }
 

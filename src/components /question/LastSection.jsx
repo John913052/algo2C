@@ -3,7 +3,7 @@ import React from 'react'
 
 const LastSection = () => {
   return (
-    <Box sx={{width:"100%",backgroundColor:"white",padding:'0px'}}>
+    <Box sx={{width:"100%",height:"100vh",backgroundColor:"white",padding:'0px'}}>
         hiiii
     </Box>
   ) 

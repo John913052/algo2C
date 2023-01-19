@@ -15,14 +15,14 @@ const MakeF1 = () => {
       {/* overflow={'hidden'} add whenever needed */}
       
       <HStack mt={'10px'}>
-        <Text textAlign={'center'} mb={'0px'} pl={'15px'}>Difficulty : 
+        <Text textAlign={'center'} mb={'0px'} pl={'15px'} className="promtcolor">Difficulty : 
         </Text>
-        <Box pl={'15px'} borderRadius='md' bg='green' color='green'  h={17} w={17}></Box>
-        <Text pl={'15px'}>Category</Text>
-        <Text pl={'15px'}>Successfully Submissions : 123424+</Text>
+        <Box  pl={'15px'} borderRadius={'md'} bg={'green'} color={'green'}  h={17} w={17}></Box>
+        <Text className="promtcolor" pl={'15px'}>Category</Text>
+        <Text className="promtcolor" pl={'15px'}>Successfully Submissions : 123424+</Text>
       </HStack>
-      <HStack mt={'30px'} mb={'15px'}>
-        <Text mb={'0px'} textAlign={'center'} pl={'15px'} mr={'7px'}>Validations Subsequent </Text>
+      <HStack mt={'30px'} mb={'15px'} >
+        <Text mb={'0px'} textAlign={'center'} pl={'15px'} mr={'7px'} className="promtcolor">Validations Subsequent </Text>
         <i className="fa-solid fa-circle validation" style={{color:'red'}} ></i>
         <i className="fa-regular fa-star star1"></i>
       </HStack>

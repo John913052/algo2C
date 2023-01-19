@@ -106,13 +106,10 @@
     background-color: aqua !important;
 } */
 
-.itemgrid1 a div,.itemgrid2 a div,.itemgrid3 a div,.itemgrid4 a div,.itemgrid5 a div,.itemgrid6 a div{
+.itemgrid1 div h3,p,.itemgrid2 div h3,p,.itemgrid3 div h3,p,.itemgrid4 div h3,p,.itemgrid5 div h3,p,.itemgrid6 div h3,p{
     color: #02203c !important;
 }
 
-/* .itemgrid1 a,div p,h3{
-    color: #02203c !important;
-} */
 
 .itemgrid1:hover{
     background-color: aqua !important;
