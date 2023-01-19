@@ -23,8 +23,8 @@
 
 
 .reflex-container.vertical > .reflex-splitter {
-    border-bottom: 1px solid #15314b !important;
-    border-top: 1px solid #15314b !important;
+    border-left: 1px solid #15314b !important;
+    border-right: 1px solid #15314b !important;
     cursor: col-resize;
     height: 100%;
     width: 17px !important;
@@ -41,8 +41,8 @@
 
 /* Demo Component */
 .horizontal > .reflex-splitter {
-    border-bottom: 1px solid #15314b;
-    border-top: 1px solid #15314b;
+    /* border-bottom: 1px solid #15314b;
+    border-top: 1px solid #15314b; */
     cursor: row-resize;
     width: 100%;
     height: 17px !important;

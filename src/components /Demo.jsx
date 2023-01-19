@@ -166,7 +166,7 @@ const Demo = () => {
           <ReflexElement className="bottom-pane">
             <Tabs size='md' variant='enclosed' fontSize={'14px'}>
               <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'} className='navtab4'>
-                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch4({ type: 'fun9' })} className='navtab1'>CustomOutput</Tab>
+                <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch4({ type: 'fun9' })}>CustomOutput</Tab>
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab> */}
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch4({type:'fun10'})} >Raw Output</Tab> */}
