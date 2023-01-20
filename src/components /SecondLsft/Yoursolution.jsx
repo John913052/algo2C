@@ -16,8 +16,8 @@ import { useSelector } from 'react-redux';
 
 const Yoursolution = () => {
   const lang=useSelector((state)=>state.Selectlang1)
-    // console.log(lang)
-    const [code, setCode] = useState(lang);
+    console.log(lang)
+    const [code, setCode] = useState('');
   
     const onChange = (e) => {
       if (e.keyCode === 8) {
@@ -29,7 +29,7 @@ const Yoursolution = () => {
   return (
     <Container width={'full'}>
       <AceEditor
-        placeholder="Placeholder Text"
+        placeholder={`Write your code here ${lang}`}
         mode={lang}
         theme="monokai"
         name="blah2"

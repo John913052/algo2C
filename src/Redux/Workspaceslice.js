@@ -5,7 +5,7 @@ const Selectlang=createSlice({
     initialState,
     reducers:{
         lang1(state,action){
-             return state
+            return action.payload
         }
     }
 });

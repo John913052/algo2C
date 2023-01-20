@@ -14,15 +14,16 @@ import Question from './question/Question';
 // store work 
 import { useDispatch, useSelector } from 'react-redux';
 import { lang1 } from '../Redux/Workspaceslice';
+
 function AlgoNav() {
 
-
+  const [Lang,setlinks]=useState('javascript')
   const Dispatch=useDispatch()
-  const fun1=()=>{
-    Dispatch(lang1('javascript'))
-  }
+  // const fun1=()=>{
+    // }
+  // Dispatch(lang1(Lang))
   const lang=useSelector((state)=>state.Selectlang1)
-  console.log(lang)
+  // console.log(lang)
   
   return (
     <>
@@ -38,18 +39,18 @@ function AlgoNav() {
               {/* <Nav.Link href="#link" className='link3'>Link</Nav.Link> */}
               <NavDropdown title={lang} id="basic-nav-dropdown" className='link3'>
                 
-                <NavDropdown.Item href="#action/3.2" className='droplink' onChange={fun1} >
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{Dispatch(lang1('typescript'))}}>
                 typescript
                 </NavDropdown.Item>
                
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>Dispatch(lang1('javascript'))}>
+                <NavDropdown.Item href="#action/3.4" className='droplink'onClick={()=>{Dispatch(lang1('java'))}}>
                 Java
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{Dispatch(lang1('python'))}}>
                   Python
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
-                  Java
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{Dispatch(lang1('css'))}}>
+                  CSS
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
                   Python
