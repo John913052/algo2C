@@ -30,7 +30,11 @@ import './setting.css';
 import {btntheme,Font1,editorthem,editorkey,btnonff}from '../reducers /Btnc';
 // import { useState } from 'react';
 import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Font3 } from '../../Redux/FontSlice';
+
 const Settingicon = () => {
+
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
   const [dlinks,setlinks]=useState('JavaScript')
@@ -47,6 +51,9 @@ const Settingicon = () => {
   const [editor,dispatche]=useReducer(editorthem,inieditor);
   const [editorkey1,dispatchkey]=useReducer(editorkey,inieditorkey);
 
+  const Dispatch=useDispatch()
+  const Font3s=useSelector((state)=>state.FontSlice)
+  // const lang=useSelector((state)=>state.Selectlang1)
 
   return (
     <>
@@ -72,68 +79,32 @@ const Settingicon = () => {
           <SimpleGrid columns={2} spacingX='20px' spacingY='20px' textAlign={'center'} justifyContent={'center'}>
             <Box className='boxst2'>Theme</Box>
             <Box className='boxst4'>
-            <Button leftIcon={<BsMoon />} bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'onClick={()=>dispatch({type:'dark'})}>
+            <Button leftIcon={<BsMoon />} bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3' onClick={()=>dispatch({type:'dark'})}>
                 Dark
               </Button>
-            <Button leftIcon={<BsSun />}  bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3'onClick={()=>dispatch({type:'sun'})}>
+            <Button leftIcon={<BsSun />}  bgColor={changecolor} colorScheme='teal' variant='solid' className='boxst3' onClick={()=>dispatch({type:'sun'})}>
                 Light
               </Button>
-
-
-            </Box>
-            <Box className='boxst2'>Layout</Box>
-            <Box className='boxst'>
-            <NavDropdown title={dlinks} id="basic-nav-dropdown" className='settinglink'>
-                
-                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
-                  C#
-                </NavDropdown.Item>
-               
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
-                  C++
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
-                  Go Lang
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
-                  Java
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
-                  Python
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
-                  kotlin
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
-                  TypeScript
-                </NavDropdown.Item>
-              </NavDropdown>
             </Box>
             <Box className='boxst2'>Font Size</Box>
             <Box className='boxst'>
-            <NavDropdown title={font1} id="basic-nav-dropdown" className='settinglink'>
+            <NavDropdown title={Font3s} id="basic-nav-dropdown" className='settinglink'>
                 
-                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>dispatchf({type:'0.8x'})}>
-                  0.8x
+                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{Dispatch(Font3(16))}}>
+                  16
                 </NavDropdown.Item>
                
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'0.9x'})}>
-                  0.9x
+                <NavDropdown.Item href="#action/3.4" className='droplink'  onClick={()=>{Dispatch(Font3(18))}}>
+                  18
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'1x'})}>
-                  1x
+                <NavDropdown.Item href="#action/3.4" className='droplink'  onClick={()=>{Dispatch(Font3(20))}}>
+                  20
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'1.1x'})}>
-                  1.1x
+                <NavDropdown.Item href="#action/3.4" className='droplink'  onClick={()=>{Dispatch(Font3(24))}}>
+                  24
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'1.2x'})}>
-                  1.2x
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'1.3x'})}>
-                  1.3x
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>dispatchf({type:'1.4'})}>
-                  1.4x
+                <NavDropdown.Item href="#action/3.4" className='droplink'  onClick={()=>{Dispatch(Font3(28))}}>
+                  28
                 </NavDropdown.Item>
               </NavDropdown>
             </Box>

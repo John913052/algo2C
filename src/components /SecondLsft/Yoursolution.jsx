@@ -15,6 +15,7 @@ import { style } from '@mui/system';
 import { useSelector } from 'react-redux';
 
 const Yoursolution = () => {
+  const Font3s=useSelector((state)=>state.FontSlice)
   const lang=useSelector((state)=>state.Selectlang1)
     console.log(lang)
     const [code, setCode] = useState('');
@@ -26,6 +27,7 @@ const Yoursolution = () => {
         setCode(newValue);
       }
     }
+    console.log(`${Font3s}px`)
   return (
     <Container width={'full'}>
       <AceEditor
@@ -36,7 +38,7 @@ const Yoursolution = () => {
         // onLoad={this.onLoad}
         // onChange={this.onChange}
         onChange={onChange}
-        fontSize={14}
+        fontSize={`${Font3s}px`}
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={true}
