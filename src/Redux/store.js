@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import WorkSettings from './Workspaceslice'
+import Selectlang1 from './Workspaceslice'
 
 const store=configureStore({
     reducer:{
-        WorkSetting1:WorkSettings,
+        Selectlang1:Selectlang1,
     }
 })
 

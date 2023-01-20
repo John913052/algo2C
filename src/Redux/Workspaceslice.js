@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-const initialState=1;
-const WorkSettings=createSlice({
-    name:"Worksetting",
+const initialState='javascript'
+const Selectlang=createSlice({
+    name:"Selectlang1",
     initialState,
     reducers:{
-        darklight(state,action){
-            return state=state+1
+        lang1(state,action){
+             return state
         }
     }
 });
 
 
-export const {darklight}=WorkSettings.actions;
-export default WorkSettings.reducer
+export const {lang1}=Selectlang.actions;
+export default Selectlang.reducer

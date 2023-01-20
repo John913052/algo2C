@@ -10,9 +10,20 @@ import './algonav.css';
 import Timer from './subcompo/Timer';
 import Settingicon from './subcompo/Settingicon';
 import Question from './question/Question';
+
+// store work 
+import { useDispatch, useSelector } from 'react-redux';
+import { lang1 } from '../Redux/Workspaceslice';
 function AlgoNav() {
 
-  const [dlinks,setlinks]=useState('JavaScript')
+
+  const Dispatch=useDispatch()
+  const fun1=()=>{
+    Dispatch(lang1('javascript'))
+  }
+  const lang=useSelector((state)=>state.Selectlang1)
+  console.log(lang)
+  
   return (
     <>
 
@@ -25,17 +36,17 @@ function AlgoNav() {
               <Nav.Link href="/question" target={'_parent'} className='link1'><i className="fa-solid fa-bars"></i></Nav.Link>
               <Nav.Link href="https://www.algoexpert.io/questions/river-sizes" className='link2'><i className="fa-solid fa-arrow-right-long"></i></Nav.Link>
               {/* <Nav.Link href="#link" className='link3'>Link</Nav.Link> */}
-              <NavDropdown title={dlinks} id="basic-nav-dropdown" className='link3'>
+              <NavDropdown title={lang} id="basic-nav-dropdown" className='link3'>
                 
-                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{setlinks("c#")}}>
-                  C#
+                <NavDropdown.Item href="#action/3.2" className='droplink' onChange={fun1} >
+                typescript
                 </NavDropdown.Item>
                
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('C++')}}>
-                  C++
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>Dispatch(lang1('javascript'))}>
+                Java
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Go Lang')}}>
-                  Go Lang
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
+                  Python
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Java')}}>
                   Java
@@ -57,7 +68,7 @@ function AlgoNav() {
             
             </Nav>
             <Nav className='n2'>
-              <Nav.Link href="#link" className='link5'><i className="fa-solid fa-bug"></i></Nav.Link>
+              <Nav.Link href="#link" className='link5'><i className="fa-solid fa-bug"    ></i></Nav.Link>
               
               <Settingicon></Settingicon>
               {/* <Nav.Link href="#link" className='link6' > <i className="fa-solid fa-gear"></i></Nav.Link> */}

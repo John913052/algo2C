@@ -1,4 +1,9 @@
-
+*{
+    font-family: 'Open Sans', sans-serif;
+      color: white;
+    
+  }
+  
 
 
 .algonav{
@@ -165,10 +170,12 @@
     background-color: #001528;
     /* border: 1px solid red; */
     margin: 0px;
+    color: white;
 }
 
 .droplink:hover{
     background-color: #626ee3;
+    color: white;
 }
 
 .link1:hover,.link2:hover,.link3:hover,.link4:hover,.link5:hover,.link6:hover,.linkt:hover,.linktime:hover{
@@ -178,6 +185,7 @@
     background-color: #15314b;
     border-radius: 4px;
     cursor: pointer;
+  
 
 }
 .link1,.link2,.link3,.link4,.link5,.link6,.linktime{
@@ -199,6 +207,7 @@
 
 #basic-nav-dropdown{
     z-index: 999;
+    color:white
    
  
 }

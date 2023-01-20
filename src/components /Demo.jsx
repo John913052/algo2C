@@ -25,6 +25,7 @@ import AlgoNav from './AlgoNav';
 import { useDispatch } from 'react-redux';
 import { darklight } from '../Redux/Workspaceslice';
 import { useSelector } from 'react-redux';
+import AceEditor from "react-ace";
 const Demo = () => {
   const initialValue = <MakeF1></MakeF1>
   const initialValue2 = <Test></Test>
