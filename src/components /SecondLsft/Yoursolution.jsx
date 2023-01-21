@@ -10,6 +10,7 @@ import "ace-builds/src-noconflict/ext-language_tools"
 import 'ace-builds/webpack-resolver';
 import { useState } from 'react';
 import { style } from '@mui/system';
+import './yoursolution.css'
 
 // store work
 import { useSelector } from 'react-redux';
@@ -29,7 +30,7 @@ const Yoursolution = () => {
     }
     console.log(`${Font3s}px`)
   return (
-    <Container width={'full'}>
+    <Container width={'full'} mt={'50px'}>
       <AceEditor
         placeholder={`Write your code here ${lang}`}
         mode={lang}
@@ -41,7 +42,7 @@ const Yoursolution = () => {
         fontSize={`${Font3s}px`}
         showPrintMargin={true}
         showGutter={true}
-        highlightActiveLine={true}
+        highlightActiveLine={false}
         value={code}
 
         setOptions={{
@@ -50,7 +51,7 @@ const Yoursolution = () => {
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 2,
-        }} style={{ width: "100%"}} />
+        }} style={{ width: "100%",backgroundColor:'var(--compoback)'}} className='yoursolution' />
         
 
     </Container>

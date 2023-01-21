@@ -39,7 +39,7 @@ function AlgoNav() {
               {/* <Nav.Link href="#link" className='link3'>Link</Nav.Link> */}
               <NavDropdown title={lang} id="basic-nav-dropdown" className='link3'>
                 
-                <NavDropdown.Item href="#action/3.2" className='droplink' onClick={()=>{Dispatch(lang1('typescript'))}}>
+                <NavDropdown.Item  className='droplink' onClick={()=>{Dispatch(lang1('typescript'))}}>
                 typescript
                 </NavDropdown.Item>
                

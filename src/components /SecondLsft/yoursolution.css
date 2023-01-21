@@ -1,0 +1,20 @@
+.ace_gutter-cell {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 19px;
+    padding-right: 6px;
+    background-repeat: no-repeat;
+    background-color: #001528;
+    background-color: #001528 !important;
+}
+.ace_gutter-layer {
+    position: relative;
+    width: auto;
+    text-align: right;
+    pointer-events: auto;
+    /* height: 1000000px; */
+    background-color: #001528;
+    contain: style size layout;
+}

@@ -79,7 +79,7 @@
 
 /* mainf1 csss */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 0px;
   }
 
   ::-webkit-scrollbar-track {
@@ -99,7 +99,7 @@
 
 
 
-/* .navtab1{
+.navtab1{
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -108,10 +108,10 @@
   background-color: #15314b;
   height: 40px;
   position: fixed;
-  width: 49%;
+  width: 48.5%;
   top: 58px;
-} */
-/* .navtab2{
+}
+.navtab3{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,9 +119,11 @@
   background-color: #15314b;
   height: 40px;
   position: fixed !important;
-  width: 49%;
-  top:56%;
-}  */
+  width: 48.5%;
+  top:58px;
+  z-index: 9999;
+} 
+
 
 
 /* .navtab3{

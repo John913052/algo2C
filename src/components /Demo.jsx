@@ -19,8 +19,6 @@ import './resize.css'
 import './own.css'
 import Test from './second/Test';
 import AlgoNav from './AlgoNav';
-// import MakeF1 from './firstleft/MakeF1';
-// import MakeF2 from './firstleft/MakeF2';
 
 import { useDispatch } from 'react-redux';
 import { darklight } from '../Redux/Workspaceslice';
@@ -34,20 +32,18 @@ const Demo = () => {
   const [state, dispatch] = useReducer(Handelstate, initialValue)
   const [state2, dispatch2] = useReducer(Handelstate2, initialValue2)
   const [state3, dispatch3] = useReducer(Handelstate3, initialValue3)
-  const [state4, dispatch4] = useReducer(Handelstate4, initialValue4)
-  // const buttonRef=useRef()
-// const nobr=useSelector((state)=>state.WorkSetting1)
-// const [one,setone]=useState(1)
+  const [state4, dispatch4] = useReducer(Handelstate4, initialValue4);
+  const editorRef=useRef()
 
-//   const Dispatch=useDispatch('null')
-  
-//   const testing=()=>{
-//     setone(one)
-//     Dispatch(darklight(one))
-//   }
+  // function handleRunClick() {
+  //   const code = editor.getValue();
+  //   eval(code);
+  // }
+
 
   return (
     <>
+
     <AlgoNav></AlgoNav>
     <ReflexContainer orientation="vertical" style={{ height: '88vh', marginTop: '20px',display:"flex",flexWrap:"wrap" }} className='resize'>
 
@@ -143,12 +139,12 @@ const Demo = () => {
           <ReflexElement
             name="appPane">
             <Tabs size='md' variant='enclosed' fontSize={'14px'}>
-              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'} className='navtab3'>
+              <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'}  className='navtab3'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch3({ type: 'fun8' })} >YourSolution</Tab>
                 <HStack >
                   {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
                   {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'} onClick={() => dispatch3({ type: 'fun8' })}>Run Code</Button>
+                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'}  >Run Code</Button>
                 </HStack>
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab> */}
