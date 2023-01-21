@@ -91,6 +91,9 @@
     font-weight: 600;
     height: 40px;
     background-color: #626ee3 !important;
+    color: white !important;
+    /* margin-right: 0px; */
+    padding-right: 0px;
 }
 .link2 {
     width: 55px;
@@ -193,7 +196,10 @@
 }
 
 
-
+.linkt:hover{
+    background-color: #1593c4 !important;
+    color: #ffffff !important;
+}
 
 .container{
     margin: 0px 20px;
