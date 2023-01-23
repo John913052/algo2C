@@ -13,7 +13,7 @@ import './yoursolution.css'
 import { useEffect } from 'react';
 // store work
 import { useSelector } from 'react-redux';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 
 
 const Yoursolution = () => {
@@ -21,30 +21,30 @@ const Yoursolution = () => {
   const lang = useSelector((state) => state.Selectlang1)
   const [code, setCode] = useState('');
 
-  const editorRef = useRef(null);
+  // const editorRef = useRef(null);
 
   const handleChange = newValue => {
     setCode(newValue);
   };
-  const handleBackspace = () => {
-    editorRef.current.editor.delete();
-};
-  useEffect(() => {
-    if (editorRef.current) {
-      editorRef.current.editor.textInput.focus();
-    }
-  }, [editorRef]);
+//   const handleBackspace = () => {
+//     editorRef.current.editor.delete();
+// };
+//   useEffect(() => {
+//     if (editorRef.current) {
+//       editorRef.current.editor.textInput.focus();
+//     }
+//   }, [editorRef]);
 
 
   return (
     <Container width={'100%'} mt={'50px'}>
       <AceEditor
-        ref={editorRef}
+        // ref={editorRef}
         placeholder={`Write your code here ${lang}`}
         mode={lang}
         theme="monokai"
         name="blah2"
-        onKeyDown={handleBackspace} 
+        // onKeyDown={handleBackspace} 
         onChange={handleChange}
         fontSize={`${Font3s}px`}
         showPrintMargin={true}
