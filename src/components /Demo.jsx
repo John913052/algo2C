@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 import MakeF1 from './firstleft/MakeF1';
 import Yoursolution from './SecondLsft/Yoursolution';
 import Customop from './Lastright/Customop';
@@ -20,10 +20,11 @@ import './own.css'
 import Test from './second/Test';
 import AlgoNav from './AlgoNav';
 
-import { useDispatch } from 'react-redux';
-import { darklight } from '../Redux/Workspaceslice';
-import { useSelector } from 'react-redux';
-import AceEditor from "react-ace";
+// import { useDispatch } from 'react-redux';
+// import { darklight } from '../Redux/Workspaceslice';
+// import { useSelector } from 'react-redux';
+// import AceEditor from "react-ace";
+
 const Demo = () => {
   const initialValue = <MakeF1></MakeF1>
   const initialValue2 = <Test></Test>
@@ -33,7 +34,7 @@ const Demo = () => {
   const [state2, dispatch2] = useReducer(Handelstate2, initialValue2)
   const [state3, dispatch3] = useReducer(Handelstate3, initialValue3)
   const [state4, dispatch4] = useReducer(Handelstate4, initialValue4);
-  const editorRef=useRef()
+  // const editorRef=useRef()
 
   // function handleRunClick() {
   //   const code = editor.getValue();
@@ -138,13 +139,13 @@ const Demo = () => {
 
           <ReflexElement
             name="appPane">
-            <Tabs size='md' variant='enclosed' fontSize={'14px'}>
+            <Tabs size='md' variant='enclosed' fontSize={'14px'} position={'relative'}>
               <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'}  className='navtab3'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch3({ type: 'fun8' })} >YourSolution</Tab>
                 <HStack >
                   {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
                   {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'}  >Run Code</Button>
+                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'}  className="runbtn">Run Code</Button>
                 </HStack>
                 {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab> */}
@@ -210,6 +211,7 @@ const Demo = () => {
         </ReflexContainer>
 
       </ReflexElement>
+      
     </ReflexContainer>
     </>
   )

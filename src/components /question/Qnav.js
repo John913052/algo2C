@@ -10,7 +10,7 @@ import './qnav.css'
 import Hovertab from './Hovertab';
 import { Circle } from '@mui/icons-material';
 import { textAlign } from '@mui/system';
-
+import Loginpage from '../logindata/Loginpage';
 
 
 const Sappbar=styled(AppBar)`
@@ -26,16 +26,11 @@ const Boxm=styled(Box)`
 
 const Qnav = ({title}) => {
 
-  const [anchorElUser, setAnchorElUser] =useState(null);
+  const [open,setopen]=useState(false)
 
-    const handleOpenUserMenu = (event) => {
-      setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseUserMenu = () => {
-      setAnchorElUser(null);
-    };
-  
+  const handelopen=()=>{
+    setopen(true)
+  }
     return (
       <Sappbar position="static" sx={{backgroundColor:'#021f3a',boxShadow:"none"}}>
         <Container maxWidth="xl">
@@ -74,113 +69,14 @@ const Qnav = ({title}) => {
             
             <Box sx={{ flexGrow: 0}}>
               <Tooltip title="Open settings">
-                <IconButton onMouseEnter={handleOpenUserMenu} sx={{ p: 0 ,backgroundColor:'blue'}}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'blue'}}/>
+                <IconButton  sx={{ p: 0 ,backgroundColor:'blue'}} onClick={()=>handelopen()} >
+                  <Avatar  alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'blue'}}/>
                 </IconButton>
               </Tooltip>
-              <Menu className='menuitem'
-                sx={{ mt: '45px',border:'1px solid red'}}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-               
-              {/* profile tab  */}
-                <MenuItem  onClick={handleCloseUserMenu} className="menuitemlist">
-                  <Box clssName='menuitemlist' sx={{width:"290px"}}>
-                    <Box>
-                      <Typography>Welcome, Sandeep!</Typography>
-                      <Typography>You're on a Google account.</Typography>
-                    </Box>
-                    <Box sx={{
-                        width:"250px",
-                        display:'flex',
-                        flexWrap:'wrap',
-                        justifyContent:'space-evenly',
-                        alignItems:'center',
-                        border:"1px solid red",
-                        marginTop:"20px",
-                        flexDirection:"column"
-          
-                      }}>
-                        <Typography>Products servies</Typography>
-                      <Box sx={{
-                        display:'flex',
-                        width: 50,
-                        height: 50,
-                        borderRadius: 50,
-                        backgroundColor:'red',
-                        justifyContent:'center',
-                        alignItems:'center',
-                        
-                      }}>
-                        hi
-                      </Box>
-                      <Box sx={{
-                        display:'flex',
-                        width: 50,
-                        height: 50,
-                        borderRadius: 50,
-                        backgroundColor:'red',
-                        justifyContent:'center',
-                        alignItems:'center'
-                      }}>
-                        hi
-                      </Box>
-                      <Box sx={{
-                        display:'flex',
-                        width: 50,
-                        height: 50,
-                        borderRadius: 50,
-                        backgroundColor:'red',
-                        justifyContent:'center',
-                        alignItems:'center'
-                      }}>
-                        hi
-                      </Box>
-                      <Box sx={{
-                        display:'flex',
-                        width: 50,
-                        height: 50,
-                        borderRadius: 50,
-                        backgroundColor:'red',
-                        justifyContent:'center',
-                        alignItems:'center'
-                      }}>
-                        hi
-                      </Box>
-                      <Box sx={{
-                        display:'flex',
-                        width: 50,
-                        height: 50,
-                        borderRadius: 50,
-                        backgroundColor:'red',
-                        justifyContent:'center',
-                        alignItems:'center'
-                      }}>
-                        hi
-                      </Box>
-                   
-                    </Box>
-                  </Box>
-                </MenuItem>
-          
-             {/* profile tab  */}
-
-              </Menu>
             </Box>
           </Toolbar>
         </Container>
+        <Loginpage open={open} setopen={setopen}></Loginpage>
       </Sappbar>
     );
  
