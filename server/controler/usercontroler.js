@@ -1,10 +1,10 @@
 
 
 
-const signupdata=async(request,response)=>{
+const signupdata=async(req,res)=>{
    try {
-      console.log(request.body)
-      console.log(response.body)
+      console.log(req.body)
+      console.log(res.body)
    } catch (error) {
     console.log(error)
    }

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex';
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/esm/Container';
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
 import MakeF1 from './firstleft/MakeF1';
