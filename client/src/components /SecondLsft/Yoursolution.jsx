@@ -11,29 +11,41 @@ import { useState } from 'react';
 import { style } from '@mui/system';
 import './yoursolution.css'
 import { useEffect } from 'react';
-// store work
-import { useSelector } from 'react-redux';
-// import { useRef } from 'react';
+import { codeAdd } from '../../Redux/CodeSlice';
+// import { codeAdd } from './CodeSlice';
 
+// store work
+import { useDispatch, useSelector } from 'react-redux';
+
+// import { useRef } from 'react';
+// code1={code1}
+// setcode1={setcode1}
+// handelcode={handelcode}
 
 const Yoursolution = () => {
+  // subcribe value from store  fontSlice is reduce name
+  // const {
+  //   code1,
+  //   setCode1,
+  // }=props
   const Font3s = useSelector((state) => state.FontSlice)
   const lang = useSelector((state) => state.Selectlang1)
+
+  const Dispatch=useDispatch()
+
+  // get code and update onchange fuction
   const [code, setCode] = useState('');
 
-  // const editorRef = useRef(null);
 
-  const handleChange = newValue => {
-    setCode(newValue);
+   // set value of code
+   const handleChange = (newCode) => {
+    
+    setCode(newCode);
+    // setCode1(code1)
+    Dispatch(codeAdd(newCode));
+
   };
-//   const handleBackspace = () => {
-//     editorRef.current.editor.delete();
-// };
-//   useEffect(() => {
-//     if (editorRef.current) {
-//       editorRef.current.editor.textInput.focus();
-//     }
-//   }, [editorRef]);
+
 
 
   return (
@@ -46,7 +58,9 @@ const Yoursolution = () => {
         name="blah2"
         // onKeyDown={handleBackspace} 
         onChange={handleChange}
+        // onLoad={onLoad}
         fontSize={`${Font3s}px`}
+    
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={false}
@@ -62,3 +76,16 @@ const Yoursolution = () => {
   )
 }
 export default Yoursolution
+
+
+
+
+
+
+
+
+
+
+
+
+

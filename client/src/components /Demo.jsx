@@ -19,8 +19,8 @@ import './resize.css'
 import './own.css'
 import Test from './second/Test';
 import AlgoNav from './AlgoNav';
-
-// import { useDispatch } from 'react-redux';
+import { codeAdd } from '../Redux/CodeSlice';
+import { useDispatch, useSelector } from 'react-redux';
 // import { darklight } from '../Redux/Workspaceslice';
 // import { useSelector } from 'react-redux';
 // import AceEditor from "react-ace";
@@ -34,15 +34,14 @@ const Demo = () => {
   const [state2, dispatch2] = useReducer(Handelstate2, initialValue2)
   const [state3, dispatch3] = useReducer(Handelstate3, initialValue3)
   const [state4, dispatch4] = useReducer(Handelstate4, initialValue4);
-  // const editorRef=useRef()
-
-  // function handleRunClick() {
-  //   const code = editor.getValue();
-  //   eval(code);
-  // }
-
-
+  // const coderun=useSelector((state)=>state.CodeSlice);
+  const Code = useSelector((state) => state.CodeSlice);
+  const [code1,setcode1]=useState('')
+  const handelcode=(event)=>{
+    console.log(Code)
+  }
   return (
+  
     <>
 
     <AlgoNav></AlgoNav>
@@ -70,13 +69,6 @@ const Demo = () => {
 
                   </Container>
                 </TabPanel>
-                {/* <TabPanel>
-                  <Container className='bottom'>
-                 
-                    {state}
-
-                  </Container>
-                </TabPanel> */}
               </TabPanels>
             </Tabs>
 
@@ -88,13 +80,6 @@ const Demo = () => {
             <Tabs size='md' variant='enclosed' >
               <TabList bgColor={'#15314b'} height={40} fontSize={'14px'} className='navtab2'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'67px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'}  border={'none'} onClick={() => dispatch2({ type: 'fun5' })} >Test</Tab>
-                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'103px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun6'})} >QuickTest</Tab> */}
-                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'103px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun7'})} >Sandbox</Tab> */}
-                {/* <HStack > */}
-                {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                {/* <Button  width={'93px'} height={'40px'} _hover={{bgColor:'#0046C7'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                {/* </HStack> */}
 
               </TabList>
               <TabPanels>
@@ -143,30 +128,16 @@ const Demo = () => {
               <TabList bgColor={'#15314b'} height={40} justifyContent={'space-between'}  className='navtab3'>
                 <Tab _selected={{ color: 'white', bg: 'var(--compoback)' }} width={'131px'} height={'40px'} _hover={{ bgColor: 'var(--hovertab)' }} bgColor={'#15314b'} border={'none'} onClick={() => dispatch3({ type: 'fun8' })} >YourSolution</Tab>
                 <HStack >
-                  {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#003dae'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                  {/* <Button  width={'131px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch3({type:'fun8'})}>Run Code</Button>  */}
-                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'}  className="runbtn">Run Code</Button>
+                  <Button width={'93px'} height={'40px'} _hover={{ bgColor: '#0046C7' }} bgColor={'#003dae'} border={'none'}  className="runbtn" onClick={(event)=>handelcode(event)}>Run Code</Button>
                 </HStack>
-                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab>
-                <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >QuickTest</Tab> */}
-                {/* <Tab _selected={{ color: 'white', bg: 'var(--compoback)'}} width={'108px'} height={'40px'} _hover={{bgColor:'var(--hovertab)'}} bgColor={'#15314b'} border={'none'} onClick={()=>dispatch2({type:'fun9'})} >Run Code</Tab> */}
               </TabList>
               <TabPanels>
                 <TabPanel>
                   <Container className='bottom'>
-                    {/* html or componet */}
-                    {/* <Demo></Demo> */}
-                    {state3}
-
+                    {/* code editor */}
+                      {state3}
                   </Container>
                 </TabPanel>
-                {/* <TabPanel>
-                  <Container className='bottom'>
-               
-                    {state3}
-
-                  </Container>
-                </TabPanel> */}
               </TabPanels>
             </Tabs>
 

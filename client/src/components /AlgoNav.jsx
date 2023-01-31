@@ -16,12 +16,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { lang1 } from '../Redux/Workspaceslice';
 
 function AlgoNav() {
-
-  const [Lang,setlinks]=useState('javascript')
   const Dispatch=useDispatch()
-  // const fun1=()=>{
-    // }
-  // Dispatch(lang1(Lang))
+  const [Lang,setlinks]=useState('javascript')
+
+
   const lang=useSelector((state)=>state.Selectlang1)
   // console.log(lang)
   
@@ -52,14 +50,14 @@ function AlgoNav() {
                 <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{Dispatch(lang1('css'))}}>
                   CSS
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Python')}}>
-                  Python
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{Dispatch(lang1('golang'))}}>
+                  golang
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('Kotlin')}}>
-                  kotlin
+                <NavDropdown.Item href="#action/3.4" className='droplink'onClick={()=>{Dispatch(lang1('c++'))}}>
+                  c++
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('TypeScript')}}>
-                  TypeScript
+                <NavDropdown.Item href="#action/3.4" className='droplink' onClick={()=>{setlinks('c')}}>
+                  c
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link" className='link4'><i className="fa-sharp fa-solid fa-share-nodes"></i></Nav.Link>
