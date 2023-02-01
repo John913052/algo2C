@@ -1,4 +1,4 @@
-import { border, color } from '@chakra-ui/react';
+
 // import styled from '@emotion/styled';
 import { AppBar,Box ,Toolbar,IconButton,Typography, Container,Menu ,Avatar,Button,Tooltip,MenuItem  } from '@mui/material';
 import { useState } from 'react';
@@ -8,9 +8,10 @@ import AdbIcon from '@mui/icons-material/Adb';
 import React from 'react';
 import './qnav.css'
 import Hovertab from './Hovertab';
-import { Circle } from '@mui/icons-material';
-import { textAlign } from '@mui/system';
+
 import Loginpage from '../logindata/Loginpage';
+import { useSelector } from 'react-redux';
+
 
 
 const Sappbar=styled(AppBar)`
@@ -27,6 +28,8 @@ const Boxm=styled(Box)`
 const Qnav = ({title}) => {
 
   const [open,setopen]=useState(false)
+  // const [showname,setname]=useState(false)
+  const authlogin=useSelector((state)=>state.Authlogin)
 
   const handelopen=()=>{
     setopen(true)
@@ -59,21 +62,35 @@ const Qnav = ({title}) => {
 
             <Boxm sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
               {/* <Button   sx={{ my: 2}} className='qnavbtn'>Products</Button> */}
-              <Hovertab title='Products'></Hovertab>
-              <Hovertab title='Purchase'></Hovertab>
-              <Button   sx={{ my: 2}} className='qnavbtn'>Team</Button>
-              <Button   sx={{ my: 2}} className='qnavbtn'>Content</Button>
+              <Hovertab title={'Products'} >{title}</Hovertab>
+              <Hovertab title={'Purchase' }>{title}</Hovertab>
+              <Button   sx={{ my: 2,color:"white"}} className='qnavbtn'>Team</Button>
+              <Button   sx={{ my: 2,color:"white"}} className='qnavbtn'>Content</Button>
             </Boxm>
             
             {/* nav list tab */}
             
-            <Box sx={{ flexGrow: 0}}>
-              <Tooltip title="Open settings">
-                <IconButton  sx={{ p: 0 ,backgroundColor:'blue'}} onClick={()=>handelopen()} >
+            <Box sx={{ flexGrow: 0,display:"flex",justifyContent:"space-between",alignItems:"center",margin:'10px 5px'}}>
+              <Tooltip title="Open Profile">
+                <IconButton  sx={{ p: 0 ,backgroundColor:'blue'}}  >
                   <Avatar  alt="Remy Sharp" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'blue'}}/>
                 </IconButton>
               </Tooltip>
             </Box>
+            {/* logintoggle for showing your details */}
+
+            {
+              authlogin === true ?
+                <Box >
+                  <Typography sx={{ color: "white", marginLeft: "10px" }}>Hi sandy</Typography>
+                </Box>
+                :
+                <Box sx={{ color: "blue", marginLeft: "20px" }} onClick={() => handelopen()}>
+                  <Button>Login</Button>
+                </Box>
+            }
+
+
           </Toolbar>
         </Container>
         <Loginpage open={open} setopen={setopen}></Loginpage>

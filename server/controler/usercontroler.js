@@ -10,7 +10,7 @@ const signupdata=async(req,res)=>{
       const data=req.body;
       const NewData=new SignupDbc(data)
       await NewData.save()
-      console.log(data)
+      // console.log(data)
       res.status(200).json({message:"user Created Successfully"})
 
    } catch (error) {

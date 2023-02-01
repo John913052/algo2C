@@ -6,8 +6,7 @@ const SignupSchema=new mongoose.Schema({
         required:true,
         trim:true,
         min:5,
-        max:20,
-        
+        max:20,  
     },
     LastName:{
         type:"String",
@@ -43,8 +42,6 @@ const SignupSchema=new mongoose.Schema({
         default:Date.now()
     },
 });
-
-
 // module.exports=mongoose.model("SignupDbc",SignupSchema)
 const SignupDbc=mongoose.model("SignupDbc",SignupSchema);
 export default SignupDbc

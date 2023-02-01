@@ -1,5 +1,6 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+
 import { Typography,Button, TextField } from '@mui/material';
 // import styled from "styled-components";
 import styled from '@emotion/styled';
@@ -9,6 +10,7 @@ import { Box } from '@mui/system';
 import './loginpage.css'
 import { useState } from 'react';
 import { authenticateSignup } from '../../services /api';
+import { toggleloginame } from '../../Redux/Authlogin';
 
 
 const Loginbox=styled(Box)`
@@ -47,6 +49,10 @@ const obj={
     Password:''
 
 }
+const obj3={
+    Email:'',
+    Password:''
+}
 const obj2={
     login:{
         view:'login'
@@ -59,18 +65,40 @@ const Loginpage = ({open,setopen}) => {
     //send open and setopen as prop for dialog for handling login button onclick
     const [signupdata, setinput] = useState(obj)
     const [account, settoggleac] = useState(obj2.login)
- 
+    const [login_click, set_login_click] = useState(obj3)
+// this authlogin sending as prop to hovertab for  changing the name 
+    const [authlogin,setautologin] = useState(false)
+    const Dispatch=useDispatch()
+ // importing authentication from service's signup data onchange 
     const inpubox=(e)=>{
         setinput({
             ...signupdata,[e.target.name]:e.target.value
         })
     }
 
-    // importing authentication from service's 
-    const handelinput3=async(signupdata)=>{
-      await authenticateSignup(signupdata);
-    //   setinput({})
+
+    // loginbutten function onChange
+    const loginuser=(e)=>{
+        set_login_click({
+            ...login_click,[e.target.name]:e.target.value
+        })
+        
     }
+    // importing authentication from service's signup data onClick
+    const handelinput3=async(signupdata)=>{
+      const signup_user_data=await authenticateSignup(signupdata);
+      console.log(signup_user_data.data)
+    //   setinput({})
+    
+    }
+
+    // handel login function onchange function by uisng onClick 
+    // const handel_login_change=()=>{
+    //     console.log(login_click)  //obj
+    //     setautologin(true);    
+    //     Dispatch(togglelogi_name(true))
+    // }
+
 
     const handelacclounttogle=()=>{
         settoggleac(obj2.signup)
@@ -88,7 +116,6 @@ const Loginpage = ({open,setopen}) => {
           <Dialog 
             open={open}
             onClose={handleClose}>
-    
             <Loginbox>
                 <Box sx={{display:'flex',height:'80%'}}>
 
@@ -114,9 +141,9 @@ const Loginpage = ({open,setopen}) => {
                     :
                         <Loginboxwarpper >
                             <Typography variant='h5' sx={{color:'black'}}>Sign-Up</Typography>
-                            <TextField  style={{width: '100%',margin:'6px 0px'}} label="Enter your Email" variant="standard" />
-                            <TextField  style={{width: '100%',margin:'6px 0px'}} label="Enter your password" variant="standard"/>
-                            <Button variant="outlined" type='button'   sx={{color:'red',margin:'20px 0px',width:'100%'}}>LogIn</Button>
+                            <TextField onChange={(e)=> loginuser(e)} style={{width: '100%',margin:'6px 0px'}} label="Enter your Email" variant="standard" name='Email'/>
+                            <TextField onChange={(e)=> loginuser(e)} style={{width: '100%',margin:'6px 0px'}} label="Enter your Password" variant="standard" name='Password'/>
+                            <Button variant="outlined" type='button'   sx={{color:'red',margin:'20px 0px',width:'100%'}} onClick={()=>Dispatch(toggleloginame(true))}>LogIn</Button>
                             <Typography> Don't have account <Typography variant= 'span' sx={{color:'blue',cursor:'pointer'}} onClick={handelacclounttogle}>Create Accont</Typography>
                             </Typography>
                         </Loginboxwarpper>

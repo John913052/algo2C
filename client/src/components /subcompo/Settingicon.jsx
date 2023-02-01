@@ -1,8 +1,4 @@
 import React, { useReducer, useState } from 'react';
-import { FiChevronDown } from "react-icons/fi";
-import Container from 'react-bootstrap/esm/Container';
-import Nav from 'react-bootstrap/esm/Nav';
-import Navbar from 'react-bootstrap/esm/Navbar';
 import NavDropdown from 'react-bootstrap/esm/NavDropdown';
 import { BsMoon,BsSun} from 'react-icons/bs';
 import './setting.css'
@@ -37,23 +33,20 @@ const Settingicon = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
-  const [dlinks,setlinks]=useState('JavaScript')
   // const [font1,setfont2]=useState('1x')
   const initial='#15314b'
   const initialc='#15314b'
-  const inifont='0.8'
   const inieditor='Monokai'
   const inieditorkey='Sublime'
   const [changecolor,dispatch]=useReducer(btntheme,initial);
   const [offcolor,dispatchc]=useReducer(btnonff,initialc);
   // const [changecolor1,dispatch1]=useReducer(btntheme1,initial);
-  const [font1,dispatchf]=useReducer(Font1,inifont);
+
   const [editor,dispatche]=useReducer(editorthem,inieditor);
   const [editorkey1,dispatchkey]=useReducer(editorkey,inieditorkey);
 
   const Dispatch=useDispatch()
   const Font3s=useSelector((state)=>state.FontSlice)
-  // const lang=useSelector((state)=>state.Selectlang1)
 
   return (
     <>
