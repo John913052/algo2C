@@ -67,7 +67,7 @@ const Loginpage = ({open,setopen}) => {
     const [account, settoggleac] = useState(obj2.login)
     const [login_click, set_login_click] = useState(obj3)
 // this authlogin sending as prop to hovertab for  changing the name 
-    const [authlogin,setautologin] = useState(false)
+    // const [authlogin,setautologin] = useState(false)
     const Dispatch=useDispatch()
  // importing authentication from service's signup data onchange 
     const inpubox=(e)=>{
@@ -87,17 +87,21 @@ const Loginpage = ({open,setopen}) => {
     // importing authentication from service's signup data onClick
     const handelinput3=async(signupdata)=>{
       const signup_user_data=await authenticateSignup(signupdata);
-      console.log(signup_user_data.data)
+      if(!signup_user_data) return;
+      
+
     //   setinput({})
+        handleClose()
     
     }
 
     // handel login function onchange function by uisng onClick 
-    // const handel_login_change=()=>{
-    //     console.log(login_click)  //obj
-    //     setautologin(true);    
-    //     Dispatch(togglelogi_name(true))
-    // }
+    const handel_login_change=()=>{
+        console.log(login_click)  //obj
+        // setautologin(true);    
+        Dispatch(toggleloginame(true))
+        handleClose()
+    }
 
 
     const handelacclounttogle=()=>{
@@ -140,10 +144,10 @@ const Loginpage = ({open,setopen}) => {
                         </Loginboxwarpper>
                     :
                         <Loginboxwarpper >
-                            <Typography variant='h5' sx={{color:'black'}}>Sign-Up</Typography>
+                            <Typography variant='h5' sx={{color:'black'}}>Sign-In</Typography>
                             <TextField onChange={(e)=> loginuser(e)} style={{width: '100%',margin:'6px 0px'}} label="Enter your Email" variant="standard" name='Email'/>
                             <TextField onChange={(e)=> loginuser(e)} style={{width: '100%',margin:'6px 0px'}} label="Enter your Password" variant="standard" name='Password'/>
-                            <Button variant="outlined" type='button'   sx={{color:'red',margin:'20px 0px',width:'100%'}} onClick={()=>Dispatch(toggleloginame(true))}>LogIn</Button>
+                            <Button variant="outlined" type='button'   sx={{color:'red',margin:'20px 0px',width:'100%'}} onClick={()=>handel_login_change()}>LogIn</Button>
                             <Typography> Don't have account <Typography variant= 'span' sx={{color:'blue',cursor:'pointer'}} onClick={handelacclounttogle}>Create Accont</Typography>
                             </Typography>
                         </Loginboxwarpper>

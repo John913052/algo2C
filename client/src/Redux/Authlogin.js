@@ -1,13 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-const Authlogin=createSlice({
-    name:'authlogin',
-    initialState:Boolean,
-    reducer:{
-        toggleloginame(state,action){
+const AuthloginSlice = createSlice({
+    name: 'authlogin',
+    initialState: false,
+    reducers: {
+        toggleloginame(state, action) {
             return action.payload;
         },
     }
 });
 
-export const {toggleloginame}=Authlogin.actions
-export default Authlogin.reducer
+export const { toggleloginame } = AuthloginSlice.actions
+export default AuthloginSlice.reducer;
+

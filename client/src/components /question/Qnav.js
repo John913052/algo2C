@@ -29,7 +29,7 @@ const Qnav = ({title}) => {
 
   const [open,setopen]=useState(false)
   // const [showname,setname]=useState(false)
-  const authlogin=useSelector((state)=>state.Authlogin)
+  const authlogin=useSelector((state)=>state.AuthloginSlice)
 
   const handelopen=()=>{
     setopen(true)

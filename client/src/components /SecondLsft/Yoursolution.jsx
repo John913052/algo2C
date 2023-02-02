@@ -42,7 +42,8 @@ const Yoursolution = () => {
     
     setCode(newCode);
     // setCode1(code1)
-    Dispatch(codeAdd(newCode));
+    setCode(newCode)
+    // Dispatch(codeAdd(newCode));
 
   };
 
